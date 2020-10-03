@@ -1,0 +1,9 @@
+#!/usr/bin/groovy
+@Library("JenkinsSharedLibrary") _
+stage('App Deployment'){
+    kubernetes(
+        application_name: env.JOB_NAME,
+        nonprod_submitters: "nonprod.user@host.com,
+        prod_submitters: "prod.user@host.com
+    )
+}
