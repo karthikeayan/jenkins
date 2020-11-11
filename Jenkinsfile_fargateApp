@@ -4,6 +4,6 @@ stage('Pipeline'){
     fargateTaskDef(
         branch: env.GIT_BRANCH, 
         microservice_name: env.JOB_NAME,
-        task_secrets: [["name": "key", "valueFrom": "AccelVaultMsMasterKey"]]
+        task_secrets: [["name": "key", "valueFrom": "NameOfTheSecretManagerSecret"]]
     )
 }
