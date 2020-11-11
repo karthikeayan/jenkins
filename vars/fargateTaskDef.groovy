@@ -67,7 +67,12 @@ cat <<EOF >taskdef.json
                     }
                 ],
 // ########################################################### //
+                //
                 "secrets":
+                [ { "name": "key",
+                 "value": "myvalue" }
+                ],
+                //
                     $(if ! [[ "$task_secrets" == "null" ]]; then
                         echo ${task_secrets}
                       else
